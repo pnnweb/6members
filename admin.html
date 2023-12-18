@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/tgdd.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>ADMIN</title>
+</head>
+<body style="background-color: rgba(127, 255, 212, 0.486);">
+    <nav>
+        <div class="container">
+            <ul id="navbar-fixed">
+                <li><a href=""><img style="width: 200px;" src="https://th.bing.com/th/id/R.473d7ca7675532c57a832565c7d4844f?rik=N9Wp03g5u7XuRg&riu=http%3a%2f%2frubee.com.vn%2fadmin%2fwebroot%2fupload%2fimage%2fimages%2flogo-the-gioi-di-dong-2.jpg&ehk=9dEf9D0yy%2b9bRcfFRmqJzZ4ebfMXu241%2f1Whf0yNV5M%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"></a></li>
+                <li style="font-size: x-large; color: white;"><b>HỆ THỐNG QUẢN LÍ TRANG WEB THẾ GIỚI DI ĐỘNG</b></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li onclick="showra()"; id="selt"><a>THÊM SẢN PHẨM</li>
+                    <li onclick="showra1()"; id="selt1"><a>QUẢN LÍ SỐ LIỆU</li>
+                    <li onclick="showra2()"; id="selt2"><a>QUẢN LÍ TÀI KHOẢN</li>    
+                    <li onclick="showra3()"; id="selt3"><a>CHIẾN DỊCH QUẢNG CÁO</li>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href=""> </a></li>
+                                <li><a href=""> </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+    </section>
+    <div id="ql" style="visibility: hidden;">
+        <br>
+        <div class="container m-2 p-4 bg-light" style="width: fit-content;">
+        <input type="text" id="product" name="New Product" placeholder="New Product" style="width: 250px;">
+        <button onclick="themmoi()" class="btn btn-success">Add</button>
+        </div>
+        <div id="ti" style="display: inline; visibility: hidden;"><b>Các sản phẩm hiện có:</b></div>
+        <div id="sl" style="display: inline; margin-left: 250px; visibility: hidden">0</div>
+        <br><br>
+        <div id="kq"></div>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+</html>

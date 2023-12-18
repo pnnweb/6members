@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="MAINPAGE">
+    <meta name="keywords" content="Dienthoai, maytinh, may in, ...">
+    <meta name="author" content="6members">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/tgdd.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel='shortcut icon' href='favicon (4).ico' />
+    <title>THẾ GIỚI DI ĐỘNG</title>
+    
+</head>
+<body>
+    <audio autoplay>
+        <source src="Nhac-chuong-tin-nhan-ting-ting-www_tiengdong_com.mp3">
+    </audio>
+    <header>
+        <img style="width: 100%; border: 1px grey solid;" src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2023/11/banner/IP15-1200-44-1200x44-2.png">
+    </header>
+    <nav>
+        <div class="container">
+            <ul id="navbar-fixed">
+                <li><a href=""><img style="width: 150px;" src="https://th.bing.com/th/id/R.473d7ca7675532c57a832565c7d4844f?rik=N9Wp03g5u7XuRg&riu=http%3a%2f%2frubee.com.vn%2fadmin%2fwebroot%2fupload%2fimage%2fimages%2flogo-the-gioi-di-dong-2.jpg&ehk=9dEf9D0yy%2b9bRcfFRmqJzZ4ebfMXu241%2f1Whf0yNV5M%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"></a></li>
+                <li id="address-form" style="cursor: pointer;"><a>Hồ Chí Minh <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+                <li><input type="text" placeholder="Bạn tìm gì....">  <i class="fa fa-search" aria-hidden="true"></i></li>
+                <li><a href=""></a><button style="width: 100px;"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Giỏ hàng</button></li>
+                <li><a href="">Kiểm tra đơn hàng</a></li>
+                <li id="chg"><a href="">Hỏi đáp</a></li>
+                <li id="login-form"><button style="width: 80px;"> Đăng nhập </button></li>
+                
+                <div class="address-form">
+                    <div class="address-form-content">
+                        <h2>Chọn địa chỉ nhận hàng <span id="address-close"><i class="fa fa-times-circle" aria-hidden="true"></i> Đóng</span></h2>
+                        <form action="">
+                            <p>Quý khách vui lòng cho biết Địa Chỉ Nhận Hàng để biết chính xác thời gian giao hàng</p>
+                            <select name="" >
+                                <option value="#">--Chọn địa điểm</option>
+                                <option value="#">TP.Hồ Chí Minh</option>
+                            </select>
+                            <select name="" >
+                                <option value="#">--Chọn quận/huyện</option>
+                                <option value="#">Quận 5</option>
+                            </select>
+                            <select name="" >
+                                <option value="#">--Chọn xã/phường</option>
+                                <option value="#">Phường 4</option>
+                            </select>
+                            <input type="text"placeholder="Số nhà,Tên đường">
+                            <button>Xác nhận</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="login-form">
+                    <div class="login-form-content">
+                        <h2>Đăng nhập vào hệ thống mua bán hàng <span id="login-close"><i class="fa fa-times-circle" aria-hidden="true"></i> Đóng</span></h2>                           
+                            <div>
+                                <h3><b>LOGIN</b></h3>
+                                <label for="urole">Vai trò</label>
+                                <select  id="role" name="urole" required>
+                                    <option value="1">Khách hàng</option>
+                                    <option value="2">Nhân viên</option>
+                                    <option value="3">Quản trị</option>
+                                </select>
+                                <label for="uid">Tài khoản</label>
+                                <input id="user" type="text" placeholder="Enter Username" name="uname" required>
+                                <label for="upass">Mật khẩu</label>
+                                <input id="pass" type="password" placeholder="Enter Password" name="upass" required>
+                                <button onclick="dangnhap()">Login</button>
+                                <br><br><a href="#"><u>ĐĂNG KÍ TẠI ĐÂY</u></a>
+                            </div>
+                        <div id="thongbao">
+                        </div>
+                    </div>
+                </div>
+                
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa fa-mobile" aria-hidden="true"></i>Điện thoại</a></li>
+                    <li><a href=""><i class="fa fa-laptop"></i>Laptop</a></li>
+                    <li><a href=""><i class="fa fa-tablet"></i>Tablet</a></li>    
+                    <li><a href=""><i class="fa fa-headphones"></i>Phụ kiện<i style="margin-left: 4px;" class="fa fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="">Sạc dự phòng </a></li>
+                                <li><a href="">Cáp sạc</a></li>
+                                <li><a href="">Hub chuyển đổi</a></li>
+                                <li><a href="">Ốp lưng điện thoại</a></li>
+                                <li><a href="">Miếng dán</a></li>
+                                <li><a href="">Bút cảm ứng</a></li>
+                                <li><a href="">Giá đỡ điện thoại</a></li>
+                                <li><a href="">Pin tiểu</a></li>
+                                <li><a href="">Phụ kiện khác</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=""><i class="material-icons">watch</i>Đồng hồ</a></li>
+                    <li><a href=""><i class="fa fa-television"></i>PC, Máy in<i style="margin-left: 4px;" class="fa fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="">Dell</a></li>
+                                <li><a href="">Asus</a></li>
+                                <li><a href="">Lenovo</a></li>
+                                <li><a href="">Apple</a></li>
+                                <li><a href="">HP</a></li>
+                                <li><a href="">Phụ kiện máy tính</a></li>
+                                <li><a href="">Máy in Canon</a></li>
+                                <li><a href="">Máy in HP</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li><a href="">Máy cũ giá rẻ</a></li>
+                    <li><a href="">Sim, thẻ cào</a></li>
+                    <li><a href="">Trả góp, điện nước</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!----------------Slider-------->
+    <section class="slider">
+        <div class="container">
+            <div class="slider-content">
+                <div class="slider-content-left">
+                    <div class="slider-content-left-top-container">
+                        <div class="slider-content-left-top" id="showhere">
+                            <a href=""><img src="images/slider 1.webp" alt=""></a> 
+                         </div>
+                         <div class="slider-content-left-top-btn">
+                            <i class="fa-solid fa-chevron-left" onclick="up()"></i>
+                            <i class="fa-solid fa-chevron-right" onclick="down()"></i>
+                        </div>
+                    </div>
+                    <div class="slider-content-left-bottom">
+                        <li onclick="hienthi(1)">Siêu Laptop</li>
+                        <li onclick="hienthi(2)">Lễ hội Oppo</li>
+                        <li onclick="hienthi(3)">Vivo Y17s</li>
+                        <li onclick="hienthi(4)">Tiệc Xiaomi</li>
+                        <li onclick="hienthi(5)">Camera IP</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="baner-one">
+        <div class="container">
+            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2023/11/banner/BIG-1200-44-1200x44.png" width="1140px" height="44" alt="">
+    
+        </div>
+    </section>
+</section>
+     <section class="slider-product-one">
+        <div class="container">
+            <div class="slider-product-one-content">
+                <div class="slider-product-one-content-title" style="text-align: center;">
+                    <h2> Săn sell online mỗi ngày, 
+                            MUA NGAY !!!
+                    </h2>
+                </div >
+                <div class="slider-product-one-content-container">
+                    <div class="slider-product-one-content-items-content">
+                        <div class=".slider-product-one-content-items">
+                            <div class="slider-product-one-content-item">
+                                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="">
+                                <div class="slider-product-one-content-items-text" >
+                                    <li>
+                                        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                    </li>
+                                    <a href="IPHONE-15 PROMAX.html" style="color: darkblue;">IPHONE 15 PROMAX</a>
+                                    <li style="margin-top: 6px;">giá sinh viên HCMUE</li>
+                                    <li><a href="">32.500.000<sup>đ</sup></a> <span>-4%</span></li>
+                                    <li>29.120.000<sup>đ</sup></li>
+                                    <li>Quà :1 airpods</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/307245/xiaomi-redmi-12-xanh-duong-thumb-1-1-600x600.jpg" alt="">
+                                <div class="slider-product-one-content-items-text" >
+                                    <li>
+                                        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                    </li>
+                                        <li>REDMI 12</li>
+                                        <li>giá sinh viên HCMUE</li>
+                                        <li><a href="">8.000.000<sup>đ</sup></a> <span>-50%</span></li>
+                                        <li>4.000.000<sup>đ</sup></li>
+                                        <li>Quà :dây chuyền bạc</li>
+                                        <li>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slider-product-one-content-item">
+                                    <img src="https://cdn.tgdd.vn/Products/Images/42/303891/iphone-15-plus-128gb-xanh-thumb-600x600.jpg" alt="">
+                                    <div class="slider-product-one-content-items-text" >
+                                        <li>
+                                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                        </li>
+                                            <li>IPHONE 13</li>
+                                            <li>giá sinh viên HCMUE</li>
+                                            <li><a href="">16.000.000<sup>đ</sup></a> <span>-20%</span></li>
+                                            <li>12.800.000<sup>đ</sup></li>
+                                            <li>Quà :chuột máy tính</li>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slider-product-one-content-item">
+                                        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/318906/vivo-y17-xanh-thumb-600x600.jpg" alt="">
+                                        <div class="slider-product-one-content-items-text">
+                                            <li>
+                                                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                            </li>
+                                                <li>OPPO A79</li>
+                                                <li>giá sinh viên HCMUE</li>
+                                                <li><a href="">12.000.000<sup>đ</sup></a> <span>-50%</span></li>
+                                                <li>6.000.000<sup>đ</sup></li>
+                                                <li>Quà :phiếu đăng ký học lại</li>
+                                                <li>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product-one-content-item">
+                                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/306785/realme-c53-gold-thumb-1-600x600.jpg" alt="">
+                                            <div class="slider-product-one-content-items-text" >
+                                                <li>
+                                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                                </li>
+                                                    <li>APPO A58G</li>
+                                                    <li>giá sinh viên HCMUE</li>
+                                                    <li><a href="">15.000.000<sup>đ</sup></a> <span>-25%</span></li>
+                                                    <li>11.250.000<sup>đ</sup></li>
+                                                    <li>Quà :Qua môn</li>
+                                                    <li>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                            
+                    </div> 
+
+                        <div class=".slider-product-one-content-items">
+                            <div class="slider-product-one-content-item">
+                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/267212/Samsung-Galaxy-S21-FE-vang-600x600.jpg" alt="">
+                            <div class="slider-product-one-content-items-text" >
+                                <li>
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                </li>
+                                    <li>SAMSUNG GALAXY S21</li>
+                                    <li>giá sinh viên HCMUE</li>
+                                    <li><a href="">9.900.890<sup>đ</sup></a> <span>-96%</span></li>
+                                    <li>100.000<sup>đ</sup></li>
+                                    <li>Quà :Qua môn</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="https://cdn.tgdd.vn/Products/Images/42/306994/samsung-galaxy-s23-fe-xanh-thumb-600x600.jpg" alt="">
+                                <div class="slider-product-one-content-items-text" >
+                                    <li>
+                                        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                    </li>
+                                        <li>SAMSUNG GALAXY S23</li>
+                                        <li>giá sinh viên HCMUE</li>
+                                        <li><a href="">17.008.900<sup>đ</sup></a> <span>-96%</span></li>
+                                        <li>680.356<sup>đ</sup></li>
+                                        <li>Quà :Qua môn</li>
+                                        <li>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slider-product-one-content-item">
+                                    <img src="https://cdn.tgdd.vn/Products/Images/42/299250/samsung-galaxy-z-flip5-xanh-mint-thumb-600x600.jpg" alt="">
+                                    <div class="slider-product-one-content-items-text" >
+                                        <li>
+                                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                        </li>
+                                            <li>SAMSUNG Z FLIP 5G</li>
+                                            <li>giá sinh viên HCMUE</li>
+                                            <li><a href="">26.000.500<sup>đ</sup></a> <span>-50%</span></li>
+                                            <li>13.000.250<sup>đ</sup></li>
+                                            <li>Quà :bàn phím</li>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slider-product-one-content-item">
+                                        <img src="https://cdn.tgdd.vn/Products/Images/42/235838/Galaxy-S22-Ultra-Burgundy-600x600.jpg" alt="">
+                                        <div class="slider-product-one-content-items-text" >
+                                            <li>
+                                                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                            </li>
+                                                <a href="SAMSUNG-GALAXY S22.html" style="color: darkblue;">SAMSUNG S22 ULTRA</a>
+                                                <li style="margin-top: 6px;">giá sinh viên HCMUE</li>
+                                                <li><a href="">17.900.800<sup>đ</sup></a> <span>-20%</span></li>
+                                                <li>13.580.160<sup>đ</sup></li>
+                                                <li>Quà :chuột không dây</li>
+                                                <li>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product-one-content-item">
+                                            <img src="https://cdn.tgdd.vn/Products/Images/42/275953/samsung-galaxy-m54-bac-thumb-600x600.jpg" alt="">
+                                            <div class="slider-product-one-content-items-text" >
+                                                <li>
+                                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                                </li>
+                                                    <li>SAMSUNG M54</li>
+                                                    <li>giá sinh viên HCMUE</li>
+                                                    <li><a href="">10.000.000<sup>đ</sup></a> <span>-90%</span></li>
+                                                    <li>1.000.000<sup>đ</sup></li>
+                                                    <li>Quà :đồng hồ</li>
+                                                    <li>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                            
+                    </div> 
+
+                        <div class=".slider-product-one-content-items">
+                            <div class="slider-product-one-content-item">
+                            <img src="https://cdn.tgdd.vn/Products/Images/44/310282/acer-aspire-3-a315-510p-32ef-i3-nxkdhsv001-thumb-600x600.jpg" alt="">
+                            <div class="slider-product-one-content-items-text" >
+                                <li>
+                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                </li>
+                                    <li>ACER ASPIRE A315</li>
+                                    <li>giá sinh viên HCMUE</li>
+                                    <li><a href="">16.000.000<sup>đ</sup></a> <span>-50%</span></li>
+                                    <li>8.000.000<sup>đ</sup></li>
+                                    <li>Quà :laptop đời mới</li>
+                                    <li>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="slider-product-one-content-item">
+                                <img src="https://cdn.tgdd.vn/Products/Images/44/313084/hp-15s-fq5229tu-i3-8u237pa-thumb-600x600.png" alt="">
+                                <div class="slider-product-one-content-items-text" >
+                                    <li>
+                                        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                    </li>
+                                        <a href="LAPTOP-HP.html" style="color: darkblue;">HP 15S 1215U</a>
+                                        <li style="margin-top: 6px;">giá sinh viên HCMUE</li>
+                                        <li><a href="">17.500.000<sup>đ</sup></a> <span>-90%</span></li>
+                                        <li>1.750.000<sup>đ</sup></li>
+                                        <li>Quà :loa</li>
+                                        <li>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slider-product-one-content-item">
+                                    <img src="https://cdn.tgdd.vn/Products/Images/44/305008/asus-vivobook-15-x1504va-i5-nj025w-thumb-600x600.jpg" alt="">
+                                    <div class="slider-product-one-content-items-text" >
+                                        <li>
+                                            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                        </li>
+                                            <li>ASUS PRO</li>
+                                            <li>giá sinh viên HCMUE</li>
+                                            <li><a href="">21.500.000<sup>đ</sup></a> <span>-90%</span></li>
+                                            <li>2.150.000<sup>đ</sup></li>
+                                            <li>Quà :Qua môn</li>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slider-product-one-content-item" >
+                                        <img src="https://cdn.tgdd.vn/Products/Images/44/314630/acer-aspire-5-a515-58gm-51lb-i5-nxkq4sv002-170923-015941-600x600.jpg" alt="">
+                                        <div class="slider-product-one-content-items-text" >
+                                            <li>
+                                                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                            </li>
+                                                <li>ACER A515</li>
+                                                <li>giá sinh viên HCMUE</li>
+                                                <li><a href="">15.500.000<sup>đ</sup></a> <span>-96%</span></li>
+                                                <li>600.581<sup>đ</sup></li>
+                                                <li>Quà :tai nghe</li>
+                                                <li>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slider-product-one-content-item">
+                                            <img src="https://cdn.tgdd.vn/Products/Images/44/310448/msi-gf63-12uc-i5-803vn-glr-thumb-600x600.jpg" alt="">
+                                            <div class="slider-product-one-content-items-text" >
+                                                <li>
+                                                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/2020/10/content/icon1-50x50.png" alt=""><p>HOT SALE tháng này</p>
+                                                </li>
+                                                    <li>MSI GAMING 15</li>
+                                                    <li>giá sinh viên HCMUE</li>
+                                                    <li><a href="">32.600.000<sup>đ</sup></a> <span>-5%</span></li>
+                                                    <li>30.970.000<sup>đ</sup></li>
+                                                    <li>Quà :1 bức tranh</li>
+                                                    <li>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                            
+                    </div> 
+               </div>
+        </div>
+    </div>
+     </section>
+    
+</section>
+     <script src="js/script.js"></script>
+</body>
+<footer class="footer" style="margin-top: 10px;">
+    <section style="margin-bottom: 0px;">
+        <div class="container">
+            <a href=""><img style="width:1200px;height:370px;" src="images/anh1.jpg" /></a>
+        </div>
+    </section>
+    <section class="clearfix footer__top" style=" background-color:white; height:220px;">
+        <div class="container">
+            <div class="footer__col">
+                <ul class="f-listmenu">
+                    <li><a href="">Tích điểm Quà tặng VIP</a></li>
+                    <li><a href="">Lịch sử mua hàng</a></li>
+                    <li><a href="">Tìm hiểu về mua trả góp</a></li>
+                    <li><a href="">Chính sách bảo hành</a></li>
+                    <li><a href="">Xem thêm <i class="fa-solid fa-sort-down" style="color: #000000;"></i></a>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <ul class="f-listmenu">
+                    <li><a href="">Giới thiệu công ty (MWG.vn)</a></li>
+                    <li><a href="">Tuyển dụng</a></li>
+                    <li><a href="">Gửi góp ý, khiếu nại</a></li>
+                    <li><a href="">Tìm siêu thị (3.353 shop)</a></li>
+                    <li><a href="">Xem bản mobile</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="f-listtel">
+                    <p class="f-listtel__title">
+                        <strong>Tổng đài hỗ trợ</strong>
+
+                        (Miễn phí gọi)
+
+                    </p>
+                    <p class="f-listtel__content">
+                        <span>Khiếu nại:</span> <a style="font-weight: bold; color: #2f80ed;" href="tel:18001062">1800.1062</a>
+                        (8:00 - 21:30)
+                    </p>
+                    <p class="f-listtel__content">
+                        <span>Bảo hành:</span> <a style="font-weight: bold; color: #2f80ed;" href="tel:18001064">1800.1064</a>
+                        (8:00 - 21:00)
+                    </p>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="f-social">
+                    <a href="">
+                        <img src="images/tải xuống.png" />
+                        3886.8k Fan
+                    </a>
+                    <a href="">
+                        <img src="images/youtobe.png" />
+                        863k Đăng ký
+                    </a>
+
+                    <a href="">
+                        <img src="images/tải xuống (1).png" />
+                        Zalo TGDĐ
+                    </a>
+                </div>
+                <div class="f-certify">
+                    <a href="">
+                        <img src="images/anh2.jpg" />
+</a>
+
+                </div>
+                <div class="f-website">
+                    <div class="footer__logo">
+                        <p class="footer__logo-hd">Website cùng tập đoàn</p>
+                        <a href=""><img style="height: 60px; width: 350px; margin-bottom:10px;" src="images/anh3.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+            <p style="color: #666; font-size: 12px;">
+                © 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH &amp; ĐT TP.HCM cấp ngày 02/01/2007. GPMXH: 238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 04/06/2020.<br>
+                Địa chỉ: 128 Trần Quang Khải, P.Tân Định, Q.1, TP.Hồ Chí Minh. Địa chỉ liên hệ và gửi chứng từ: Lô T2-1.2, Đường D1, Đ. D1, P.Tân Phú, TP.Thủ Đức, TP.Hồ Chí Minh. Điện thoại: 028 38125960. Email: cskh@thegioididong.com. Chịu trách nhiệm nội dung: Huỳnh Văn Tốt. Email: Tot.huynhvan@thegioididong.com.
+                <a style="color: #2f80ed; font-size: 12px;" href="">Xem chính sách sử dụng</a>
+
+            </p>
+        </div>
+
+
+    </section>
+</footer>
+</html>
