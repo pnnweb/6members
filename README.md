@@ -1,5 +1,5 @@
-## BÀI CUỐI KHÓA MÔN THIẾT KẾ WEB
-# NHÓM 6members
+#BÀI CUỐI KHÓA MÔN THIẾT KẾ WEB
+##NHÓM 6members
 
 # GỒM CÁC THÀNH VIÊN:
 - 49.01.103.010	Nguyễn Võ Nguyên Chương	
